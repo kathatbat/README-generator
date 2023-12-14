@@ -52,56 +52,58 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            throw err;
+        }
+        console.log('Your file has been created!');
+    });
+}
 
 
 // TODO: Create a function to initialize app
 function init()  {
-    inquirer.prompt(questions) .then( (data) =>{
-        console.log(data);
-        console.log(data.title);
-        fs.writeFile('practice.md', generateMarkdown(data), (err) =>{
-            if(err){
-                throw err
-            }
-            console.log('Your file has been created!');
-        });
-    })
-};
-
+    inquirer.prompt(questions).then((data) => {
+        const markdown = generateMarkdown(data);
+        writeToFile('README.md', markdown);
+});
+}
 function generateMarkdown(data) {
     return `# ${data.title}
 
 ## Description 
-     ${data.description}
+${data.description}
 
 ## Table of Contents
-    [Instillation] {##Instillation}
-    [Usage] {##Usage}
-    [Contributing] {##Contributing}
-    [Tests] {##Tests}
-    [License] {##License}
-    [Questions] {##Questions}
+- [Installation](#installation) 
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
 
-## Instillation 
-     ${data.instillation}
+## Installation 
+${data.instillation}
 
 ## Usage 
-     ${data.usage}
+${data.usage}
 
 ## Contributing 
-     ${data.credit}
+${data.credit}
 
 ## Tests 
-     ${data.tests}
+${data.tests}
 
 ## License 
-     ${data.license}
+${data.license}
 
 ## Questions 
-     ${data.email} 
-     ${data.github}
+- [Email](#questions)
+- [GitHub](#questions)
+  * [${data.github}](https://github.com/${data.github})
 `;
-  }
+}
+
 // Function call to initialize app
 init();

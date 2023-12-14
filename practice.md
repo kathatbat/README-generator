@@ -4,12 +4,12 @@
      yes
 
 ## Table of Contents
-    [Instillation] {##Instillation}
-    [Usage] {##Usage}
-    [Contributing] {##Contributing}
-    [Tests] {##Tests}
-    [License] {##License}
-    [Questions] {##Questions}
+    - [Instillation](#instillation) 
+    - [Usage](#usage)
+    - [Contributing](#contributing)
+    - [Tests](#tests)
+    - [License](#license)
+    - [Questions](#questions)
 
 ## Instillation 
      yes
