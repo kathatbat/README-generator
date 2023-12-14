@@ -1,7 +1,7 @@
-# yes
+# README.md generator
 
 ## Description 
-yes
+This is a command line application that allows the user to answer questions and then create a readme file.
 
 ## Table of Contents
 - [Installation](#installation) 
@@ -12,21 +12,21 @@ yes
 - [Questions](#questions)
 
 ## Installation 
-yes
+Go to your terminal and make sure you're in the correct path. Type 'npm i'. Then type 'node index.js'
 
 ## Usage 
-yes
+This is a highly useful application because a qaulity README.md file is needed with every project. 
 
 ## Contributing 
-yes
+AskBCS and tutors
 
 ## Tests 
-yes
+N/A
 
 ## License 
-Apache
+None
 
 ## Questions 
 - [Email](#questions)
 - [GitHub](#questions)
-  * [ys](https://github.com/ys)
+  * [kathatbat](https://github.com/kathatbat)
