@@ -60,7 +60,7 @@ function init()  {
     inquirer.prompt(questions) .then( (data) =>{
         console.log(data);
         console.log(data.title);
-        fs.writeFile('practice.md', data.title, (err) =>{
+        fs.writeFile('practice.md', generateMarkdown(data), (err) =>{
             if(err){
                 throw err
             }
@@ -69,5 +69,39 @@ function init()  {
     })
 };
 
+function generateMarkdown(data) {
+    return `# ${data.title}
+
+## Description 
+     ${data.description}
+
+## Table of Contents
+    [Instillation] {##Instillation}
+    [Usage] {##Usage}
+    [Contributing] {##Contributing}
+    [Tests] {##Tests}
+    [License] {##License}
+    [Questions] {##Questions}
+
+## Instillation 
+     ${data.instillation}
+
+## Usage 
+     ${data.usage}
+
+## Contributing 
+     ${data.credit}
+
+## Tests 
+     ${data.tests}
+
+## License 
+     ${data.license}
+
+## Questions 
+     ${data.email} 
+     ${data.github}
+`;
+  }
 // Function call to initialize app
 init();
