@@ -1,7 +1,7 @@
-# README.md generator
+# Note-Taker App
 
 ## Description 
-This is a command line application that allows the user to answer questions and then create a readme file.
+This is an application that uses Express.js to save and retrieve note data.
 
 ## Table of Contents
 - [Installation](#installation) 
@@ -12,21 +12,24 @@ This is a command line application that allows the user to answer questions and 
 - [Questions](#questions)
 
 ## Installation 
-Go to your terminal and make sure you're in the correct path. Type 'npm i'. Then type 'node index.js'
+Go to the correct path in your terminal and type "npm i", then "node server.js".
 
 ## Usage 
-This is a highly useful application because a qaulity README.md file is needed with every project. 
+N/A
 
 ## Contributing 
-AskBCS and tutors
+AskBCS and tutoring.
 
 ## Tests 
 N/A
 
 ## License 
-None
+Unlicense
 
 ## Questions 
 - [Email](#questions)
 - [GitHub](#questions)
   * [kathatbat](https://github.com/kathatbat)
+
+ ## Note
+ I never recieved the email for the GitHub Student Developer Pack, so I couldn't deploy this on Heroku. 
